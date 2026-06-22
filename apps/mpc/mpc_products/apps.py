@@ -1,5 +1,6 @@
 from django.apps import AppConfig
 
-
-class MpcProductsConfig(AppConfig):
-    name = 'mpc_products'
+class BarOrdersConfig(AppConfig):
+    default_auto_field = "django.db.models.BigAutoField"
+    name = "apps.mpc.mpc_products"
+    label = "mpc_products" 
