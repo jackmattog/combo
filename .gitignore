@@ -1,0 +1,82 @@
+# ==========================================
+# 1. Environment Variables & Secrets (CRITICAL)
+# ==========================================
+.env
+.env.local
+.env.dev
+.env.prod
+.env.*
+# Tell git Do NOT ignore the example file so team members know what variables to set
+!.env.example
+
+# ==========================================
+# 2. Python Core & Byte-code
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# ==========================================
+# 3. Virtual Environments
+# ==========================================
+.venv/
+venv/
+env/
+ENV/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ==========================================
+# 4. Local Databases (Git should not sync local data)
+# ==========================================
+db.sqlite3
+db.sqlite3-journal
+
+# ==========================================
+# 5. Django Static & Media Uploads
+# ==========================================
+# Ignore user-uploaded files and gathered static files
+staticfiles/
+media/
+/media/
+/static/
+# If you use standard collected static assets in root
+static_root/
+
+# ==========================================
+# 6. Logs and Runtime Files
+# ==========================================
+*.log
+celerybeat-schedule
+celerybeat.pid
+
+# ==========================================
+# 7. IDEs and Code Editors
+# ==========================================
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains (PyCharm)
+.idea/
+
+# Sublime Text / Vim
+*.sublime-project
+*.sublime-workspace
+*.swp
+*~
+
+# ==========================================
+# 8. OS Generated Files
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
