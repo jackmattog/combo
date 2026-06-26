@@ -19,7 +19,18 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    # Add your project apps here (e.g., "apps.users", "apps.products")
+    # Project apps
+    "apps.lesotho.bar_orders",
+    "apps.lesotho.bar_products",
+    "apps.lesotho.lesotho_carwash",
+    "apps.lesotho.lodge_rooms",
+    "apps.mpc.mpc_orders",
+    "apps.mpc.mpc_products",
+    "apps.shared.accounts",
+    "apps.shared.core",
+    "apps.shared.suggestions",
+    "apps.upmatt.upmatt_softwares",
+    "apps.upmatt.web_services",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
