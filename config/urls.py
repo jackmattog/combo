@@ -20,16 +20,16 @@ from django.urls import path, include
 from apps.upmatt import upmatt_softwares
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('',include('apps.shared.core')),
-    path('lesotho/bar_products/',include('apps.lesotho.bar_products')),
-    path('lesotho/bar_orders/',include('apps.lesotho.bar_orders')),
-    path('lesotho/lesotho_carwash/',include('apps.lesotho.lesotho_carwash')),
-    path('lesotho/lodge_rooms/',include('apps.lesotho.lodge_rooms')),
-    path('mpc/mpc_orders/',include('apps.mpc.mpc_orders')),
-    path('mpc/mpc_products/',include('apps.mpc.mpc_products')),
-    path('accounts/',include('apps.shared.accounts')),
-    path('suggestions/',include('apps.shared.suggestions')),
-    path('upmatt/upmatt_softwares/',include('apps.upmatt.upmatt_softwares')),
-    path('upmatt/web_services/',include('apps.upmatt.web_services')),
+    path('', admin.site.urls),
+    path('shared/',include('apps.shared.core.urls')),
+    path('lesotho/bar_products/',include('apps.lesotho.bar_products.urls')),
+    path('lesotho/bar_orders/',include('apps.lesotho.bar_orders.urls')),
+    path('lesotho/lesotho_carwash/',include('apps.lesotho.lesotho_carwash.urls')),
+    path('lesotho/lodge_rooms/',include('apps.lesotho.lodge_rooms.urls')),
+    path('mpc/mpc_orders/',include('apps.mpc.mpc_orders.urls')),
+    path('mpc/mpc_products/',include('apps.mpc.mpc_products.urls')),
+    path('accounts/',include('apps.shared.accounts.urls')),
+    path('suggestions/',include('apps.shared.suggestions.urls')),
+    path('upmatt/upmatt_softwares/',include('apps.upmatt.upmatt_softwares.urls')),
+    path('upmatt/web_services/',include('apps.upmatt.web_services.urls')),
 ]
