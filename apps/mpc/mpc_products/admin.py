@@ -33,9 +33,9 @@ class MpcProductAdmin(admin.ModelAdmin):
     list_filter = ('mpc_products_status', 'mpc_products_category', 'mpc_product_unit')
     
     # Fields that can be typed into the search bar
-    search_fields = ('mpc_product_name', 'mpc_product_details')
+    search_fields = ('mpc_product_name', 'mpc_product_details') 
     
-    # Automatically fills the slug field in the form as you type the product name
+    # Automatically fills the slug field in the form as you I the product name
     prepopulated_fields = {'mpc_product_slug': ('mpc_product_name',)}
     
     # Attaches the image inline manager to this product form
