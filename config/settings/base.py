@@ -53,9 +53,8 @@ ASGI_APPLICATION = "config.asgi.application"  # If using Channels/Async
 
 # 4. DJANGO REST FRAMEWORK CONFIGURATION
 REST_FRAMEWORK = {
-    # Default Permissions: Lock it down by default, open explicitly in views
     "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.IsAuthenticated",
+        "rest_framework.permissions.AllowAny",
     ],
     # Default Authentication: How users identify themselves
     "DEFAULT_AUTHENTICATION_CLASSES": [
