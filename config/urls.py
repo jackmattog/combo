@@ -20,7 +20,7 @@ from django.urls import path, include
 from apps.upmatt import upmatt_softwares
 
 urlpatterns = [
-    path('', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('lesotho/', include('apps.lesotho.urls')),
     path('',include('apps.shared.urls')),
     path('mpc/', include('apps.mpc.urls')),
