@@ -61,11 +61,18 @@ REST_FRAMEWORK = {
         # "rest_framework_simplejwt.authentication.JWTAuthentication", # Common for APIs
         "rest_framework.authentication.SessionAuthentication",
     ],
-    # Pagination: Prevent heavy queries from crashing your API
-    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
-    "PAGE_SIZE": 20,
-    # Exception Handling: Optional, custom handler if needed
-    # "EXCEPTION_HANDLER": "config.utils.custom_exception_handler",
+    # Throtling
+    #Throttle engines
+    'DEFAULT_THROTTLE-CLASSES': [
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle'
+    ],
+
+    #Custom daily limits
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '20/day',   # Unregistered users
+        'user': '100/day'   # Logged-in users
+    }
 }
 
 # 5. TEMPLATES
