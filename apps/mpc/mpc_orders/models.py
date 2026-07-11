@@ -82,7 +82,7 @@ class MpcOrderItem(models.Model):
     
     # We use SET_NULL so if a product is deleted from the database, the historical order is preserved.
     product = models.ForeignKey(
-        'apps.mpc.mpc_products.MpcProduct',
+        'mpc_products.MpcProduct',
         on_delete=models.SET_NULL, 
         null=True,
         related_name='order_items'
